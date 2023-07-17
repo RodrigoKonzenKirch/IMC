@@ -43,7 +43,9 @@ class ImcScreenViewModel : ViewModel() {
             bmi.value < 18.5 -> "Underweight"
             bmi.value in 18.5..24.9 -> "Normal"
             bmi.value in 25.0..29.9 -> "Overweight"
-            bmi.value >= 30.0 -> "Obsess"
+            bmi.value in 30.0..34.9 -> "Obesity Class I"
+            bmi.value in 35.0..39.9 -> "Obesity Class II"
+            bmi.value >= 40.0 -> "Obesity Class III"
             else -> error("Invalid params")
         }
     }
