@@ -56,8 +56,7 @@ fun CustomTextField(state: ValueState, imeAction: ImeAction, onValueChange: (Str
         value = state.value,
         onValueChange = onValueChange,
         isError = state.error != null,
-//        supportingText = Text(text = state.error?:""),
-        label = {Text(text = state.label)},
+        label = {Text(text =  "${state.label}(${state.suffix})")},
         singleLine = true,
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal, imeAction = imeAction),
         keyboardActions = KeyboardActions(
