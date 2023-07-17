@@ -1,4 +1,4 @@
-package com.example.imc
+package com.example.imc.ui.imc_screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -18,10 +18,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
+import com.example.imc.ui.components.ActionButton
+import com.example.imc.ui.components.CustomTextField
+import com.example.imc.ui.components.ModeSelector
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AppScreen( modifier: Modifier, viewModel: ImcScreenViewModel = ImcScreenViewModel() ) {
+fun ImcScreen(modifier: Modifier, viewModel: ImcScreenViewModel = ImcScreenViewModel() ) {
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
@@ -31,12 +34,12 @@ fun AppScreen( modifier: Modifier, viewModel: ImcScreenViewModel = ImcScreenView
             )
         }
     ) { paddingValues ->
-        AppScreenContent(modifier.padding(paddingValues) , viewModel)
+        ImcScreenContent(modifier.padding(paddingValues) , viewModel)
     }
 }
 
 @Composable
-fun AppScreenContent(modifier: Modifier, viewModel: ImcScreenViewModel) {
+fun ImcScreenContent(modifier: Modifier, viewModel: ImcScreenViewModel) {
     Column(
         modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,

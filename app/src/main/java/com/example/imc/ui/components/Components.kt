@@ -1,4 +1,4 @@
-package com.example.imc
+package com.example.imc.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
@@ -19,6 +19,8 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.imc.ui.imc_screen.ValueState
+import com.example.imc.ui.imc_screen.ImcScreenViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

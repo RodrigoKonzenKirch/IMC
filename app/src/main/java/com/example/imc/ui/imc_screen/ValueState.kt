@@ -1,4 +1,4 @@
-package com.example.imc
+package com.example.imc.ui.imc_screen
 
 data class ValueState(
     val label: String, // label

@@ -1,4 +1,4 @@
-package com.example.imc
+package com.example.imc.ui.imc_screen
 
 import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.runtime.mutableStateOf
