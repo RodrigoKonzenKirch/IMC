@@ -51,7 +51,11 @@ fun RowScope.ActionButton(text: String, onClick: () -> Unit) {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun CustomTextField(state: ValueState, imeAction: ImeAction, onValueChange: (String) -> Unit, ) {
+fun CustomTextField(
+    state: ValueState,
+    imeAction: ImeAction,
+    onValueChange: (String) -> Unit,
+) {
     val focusManager = LocalFocusManager.current
 
     OutlinedTextField(
@@ -66,9 +70,7 @@ fun CustomTextField(state: ValueState, imeAction: ImeAction, onValueChange: (Str
                 focusManager.clearFocus()
             }
         )
-
     )
-
 }
 
 
