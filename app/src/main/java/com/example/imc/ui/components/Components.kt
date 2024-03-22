@@ -22,11 +22,10 @@ import androidx.compose.ui.unit.sp
 import com.example.imc.ui.imc_screen.ValueState
 import com.example.imc.ui.imc_screen.ImcScreenViewModel
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ModeSelector(selectedMode: ImcScreenViewModel.Mode, updateMode: (ImcScreenViewModel.Mode) -> Unit) {
     Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-        ImcScreenViewModel.Mode.values().forEach {
+        ImcScreenViewModel.Mode.entries.forEach {
             ElevatedFilterChip(selectedMode == it, onClick = { updateMode(it) },
                 label = {
                     Text(it.name)

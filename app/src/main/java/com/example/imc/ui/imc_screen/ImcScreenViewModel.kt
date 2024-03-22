@@ -35,17 +35,17 @@ class ImcScreenViewModel : ViewModel() {
     }
 
     private fun calculateBMI(height: Double, weight: Double, isMetric: Boolean = true) {
-        bmi.value = if (isMetric)
+        bmi.doubleValue = if (isMetric)
             weight / (height * height)
         else (703 * weight) / (height * height)
 
         message.value = when {
-            bmi.value < 18.5 -> "Underweight"
-            bmi.value in 18.5..24.9 -> "Normal"
-            bmi.value in 25.0..29.9 -> "Overweight"
-            bmi.value in 30.0..34.9 -> "Obesity Class I"
-            bmi.value in 35.0..39.9 -> "Obesity Class II"
-            bmi.value >= 40.0 -> "Obesity Class III"
+            bmi.doubleValue < 18.5 -> "Underweight"
+            bmi.doubleValue in 18.5..24.9 -> "Normal"
+            bmi.doubleValue in 25.0..29.9 -> "Overweight"
+            bmi.doubleValue in 30.0..34.9 -> "Obesity Class I"
+            bmi.doubleValue in 35.0..39.9 -> "Obesity Class II"
+            bmi.doubleValue >= 40.0 -> "Obesity Class III"
             else -> error("Invalid params")
         }
     }
@@ -67,7 +67,7 @@ class ImcScreenViewModel : ViewModel() {
     fun clear() {
         heightState.value = heightState.value.copy(value = "", error = null)
         weightState.value = weightState.value.copy(value = "", error = null)
-        bmi.value = 0.0
+        bmi.doubleValue = 0.0
         message.value = ""
     }
 

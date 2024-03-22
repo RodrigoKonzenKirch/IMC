@@ -24,7 +24,7 @@ class ImcScreenViewModelTest {
     }
 
     @Test
-    fun `updateWeight with valid weight should update weight state value   `() {
+    fun `updateWeight with valid weight should update weight state value`() {
         val expectedResult = "74"
 
         viewModel.updateWeight(expectedResult)
@@ -46,7 +46,7 @@ class ImcScreenViewModelTest {
 
         assertThat(viewModel.heightState.value.value).isEqualTo("")
         assertThat(viewModel.weightState.value.value).isEqualTo("")
-        assertThat(viewModel.bmi.value).isEqualTo(0.0)
+        assertThat(viewModel.bmi.doubleValue).isEqualTo(0.0)
         assertThat(viewModel.message.value).isEqualTo("")
         assertThat(viewModel.heightState.value.error).isEqualTo(null)
         assertThat(viewModel.weightState.value.error).isEqualTo(null)
